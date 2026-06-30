@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight, faXmark } from '@fortawesome/free-solid-svg-icons'
-import './certificates.css'
+import './Certificates.css'
 
 export const Certificates = () => {
   // Ganti src dan data di bawah ini sesuai sertifikat kamu
