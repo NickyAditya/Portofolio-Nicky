@@ -14,7 +14,7 @@ export const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p>
-              I'm a Computer Science student at Institut Teknologi Nasional Bandung, currently in my 7th semester, 
+              I'm a Informatics Engineering student at Institut Teknologi Nasional Bandung, currently in my 7th semester, 
               focused on building modern and scalable web applications as a fullstack developer.
             </p>
             <p>
