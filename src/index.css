@@ -1,0 +1,200 @@
+/* ==================== VARIABLES & THEME ==================== */
+:root {
+  /* Light Mode Colors */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F5F5F5;
+  --bg-tertiary: #EFEFEF;
+  --text-primary: #1A1A1A;
+  --text-secondary: #555555;
+  --border-color: #1A1A1A;
+  --accent-primary: #5500FF;
+  --accent-secondary: #00D9FF;
+  --accent-tertiary: #FFD700;
+
+  /* Typography */
+  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-medium: 500;
+
+  /* Border & Spacing */
+  --border-width: 3px;
+  --border-radius: 8px;
+  --spacing-unit: 1rem;
+
+  /* Shadows */
+  --shadow-sm: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  --shadow-md: 8px 8px 0px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 12px 12px 0px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme='dark'] {
+  /* Dark Mode - Calm Colors */
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #242424;
+  --bg-tertiary: #2a2a2a;
+  --text-primary: #E8E8E8;
+  --text-secondary: #A0A0A0;
+  --border-color: #E8E8E8;
+  --accent-primary: #8B5CF6;
+  --accent-secondary: #06D6FF;
+  --accent-tertiary: #FFD700;
+
+  /* Dark Mode Shadows */
+  --shadow-sm: 4px 4px 0px rgba(255, 255, 255, 0.08);
+  --shadow-md: 8px 8px 0px rgba(255, 255, 255, 0.12);
+  --shadow-lg: 12px 12px 0px rgba(255, 255, 255, 0.16);
+}
+
+/* ==================== GLOBAL STYLES ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* ==================== TYPOGRAPHY ==================== */
+h1 {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -2px;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 6vw, 3rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.5px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-secondary);
+}
+
+/* ==================== BUTTONS ==================== */
+.btn {
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  border: var(--border-width) solid transparent;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background-color: var(--accent-primary);
+  color: var(--bg-primary);
+  border: var(--border-width) solid var(--accent-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-secondary);
+  border-color: var(--accent-secondary);
+  box-shadow: var(--shadow-lg);
+  transform: translate(-2px, -2px);
+}
+
+.btn-primary:active {
+  transform: translate(0, 0);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: var(--border-width) solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-secondary);
+  box-shadow: var(--shadow-lg);
+  transform: translate(-2px, -2px);
+}
+
+.btn-secondary:active {
+  transform: translate(0, 0);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==================== CONTAINERS ==================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding: 6rem 2rem;
+}
+
+.section-header {
+  margin-bottom: 4rem;
+}
+
+.section-header h2 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.header-line {
+  width: 80px;
+  height: 5px;
+  background-color: var(--accent-primary);
+  border-radius: 3px;
+}
+
+/* ==================== UTILITIES ==================== */
+.text-center {
+  text-align: center;
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+code {
+  background-color: var(--bg-secondary);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  border: 1px solid var(--border-color);
+}
