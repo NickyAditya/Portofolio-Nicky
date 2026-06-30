@@ -4,7 +4,7 @@ import tcg2Image from '../assets/tcg2.png'
 import cvisionImage from '../assets/cvision.png'
 import kemjarImage from '../assets/kemjar.png'
 import robotImage from '../assets/robot12.png'
-import jagaLansiaImage from '../assets/jagaLansia.jpg'
+import jagaLansiaImage from '../assets/jagalansia.jpg'
 import { FaArrowRight } from 'react-icons/fa'
 
 export const Projects = () => {
